@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Red Kite Refurbishment</title>
 
-  <!-- Link to external CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -14,21 +13,44 @@
   <!-- HERO -->
   <header class="hero">
     <div class="brand">
-      <!-- Menu button -->
-      <button class="menu-btn" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+
+      <!-- Menu + Dropdown -->
+      <div class="menu">
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="dropdownMenu"
+          type="button"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+<!-- sdfsfs-->
+        <div class="dropdown" id="dropdownMenu" role="menu" aria-hidden="true">
+          <a href="#about_us" role="menuitem">About Us</a>
+          <a href="#kitchens" role="menuitem">Kitchens</a>
+          <a href="#bathrooms" role="menuitem">Bathrooms</a>
+          <a href="#garage-doors" role="menuitem">Garage Doors</a>
+          <a href="#composite-doors" role="menuitem">Composite Doors</a>
+          <a href="#plumbing" role="menuitem">Plumbing</a>
+          <a href="#electrical" role="menuitem">Electrical</a>
+          <a href="#joinery" role="menuitem">Joinery</a>
+          <a href="#flooring" role="menuitem">Flooring</a>
+          <a href="#contact_us" role="menuitem">Contact Us</a>
+        </div>
+      </div>
 
       <!-- Logo -->
       <div class="logo">
-        <img 
+        <img
           src="images/logos/red_kite_transparent_logo.png"
           alt="Red Kite Refurbishment Logo"
         />
-        <!-- <div class="tag">REFURBISHMENT</div> -->
       </div>
+
     </div>
 
     <!-- Service tiles -->
@@ -41,7 +63,6 @@
       <a class="tile electrical" href="#electrical">Electrical</a>
       <a class="tile joinery" href="#joinery">Joinery</a>
       <a class="tile flooring" href="#flooring">Flooring</a>
-
     </nav>
   </header>
 
@@ -50,28 +71,17 @@
     <section id="kitchens">
       <h2>Kitchens</h2>
       <p>Kitchen refurbishment services.</p>
-      <img 
-          src="images/example_images/hidden_kitchen_birch_plywood.png"
-          alt="A birch plywood kitchen that is hidden behind sliding doors"
-        />
-      <img 
-          src="images/example_images/kitchen_birch_plywood.png"
-          alt="A birch plywood kitchen that is hidden behind sliding doors"
-        />
-      <img 
-          src="images/example_images/kitchen_birch_plywood_cupboard.png"
-          alt="A birch plywood kitchen that is hidden behind sliding doors"
-        />
-      <img 
-          src="images/example_images/arabescato_vagli_marble_bookmatched.jpeg"
-          alt="A marble bookmatched kitchen"
-        />
-      <img 
-          src="images/example_images/carrara_marble_veinmatched_island.jpeg"
-          alt="A marble island"
-        />
-      
 
+      <img src="images/example_images/hidden_kitchen_birch_plywood.png"
+           alt="A birch plywood kitchen hidden behind sliding doors" />
+      <img src="images/example_images/kitchen_birch_plywood.png"
+           alt="A birch plywood kitchen" />
+      <img src="images/example_images/kitchen_birch_plywood_cupboard.png"
+           alt="A birch plywood cupboard detail" />
+      <img src="images/example_images/arabescato_vagli_marble_bookmatched.jpeg"
+           alt="A marble bookmatched kitchen" />
+      <img src="images/example_images/carrara_marble_veinmatched_island.jpeg"
+           alt="A marble island" />
     </section>
 
     <section id="bathrooms">
@@ -98,7 +108,49 @@
       <h2>Electrical</h2>
       <p>Certified electrical work.</p>
     </section>
+
+    <section id="joinery">
+      <h2>Joinery</h2>
+      <p>Joinery and bespoke carpentry services.</p>
+    </section>
+
+    <section id="flooring">
+      <h2>Flooring</h2>
+      <p>Flooring installation and refurbishment services.</p>
+    </section>
   </main>
+
+  <!-- ✅ Script goes HERE (bottom of body) -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const dropdown = document.getElementById("dropdownMenu");
+
+    function closeMenu() {
+      dropdown.classList.remove("open");
+      dropdown.setAttribute("aria-hidden", "true");
+      menuBtn.setAttribute("aria-expanded", "false");
+    }
+
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const isOpen = dropdown.classList.toggle("open");
+      dropdown.setAttribute("aria-hidden", String(!isOpen));
+      menuBtn.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    // Close if you click anywhere else
+    document.addEventListener("click", closeMenu);
+
+    // Close when you click a link in the menu
+    dropdown.addEventListener("click", (e) => {
+      if (e.target.tagName === "A") closeMenu();
+    });
+
+    // Close on Escape key
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeMenu();
+    });
+  </script>
 
 </body>
 </html>

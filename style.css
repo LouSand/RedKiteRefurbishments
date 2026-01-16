@@ -37,16 +37,57 @@ body {
 /* MENU BUTTON */
 /* make menu button reduce in size if screen size gets smaller  */
 .menu-btn {
-  position: absolute;
-  top: 24px;
-  left: 90%;
-  transform: translateX(-50%);
   width: 54px;
   height: 54px;
   border: 3px solid #111;
   border-radius: 8px;
   background: transparent;
   cursor: pointer;
+}
+
+/* Dropdown wrapper */
+.menu {
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Keep your existing .menu-btn styles as-is */
+
+/* Dropdown panel */
+.dropdown {
+  position: absolute;
+  top: 64px;              /* space below button */
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 220px;
+  background: #111;
+  border-radius: 12px;
+  padding: 10px;
+  display: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+  z-index: 50;
+}
+
+.dropdown.open {
+  display: block;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px 12px;
+  border-radius: 10px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.dropdown a:hover,
+.dropdown a:focus-visible {
+  outline: none;
+  background: rgba(255,255,255,0.12);
 }
 
 
@@ -247,7 +288,7 @@ section p {
 section {
   padding: 80px 24px;
 }
-
+/* save*/
 section h2 {
   color: #111;
 }
