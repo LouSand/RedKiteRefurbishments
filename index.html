@@ -5,234 +5,139 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Red Kite Refurbishment</title>
 
-  <!-- GitHub Pages-safe CSS path -->
   <link rel="stylesheet" href="/RedKiteRefurbishments/style.css">
-
-  <!-- Small extra styles for "click for gallery" image overlay -->
-  <style>
-    /* Clickable image card with hover overlay */
-    .gallery-link {
-      display: block;
-      max-width: 900px;
-      margin: 18px 0 0;
-      border-radius: 16px;
-      overflow: hidden;
-      position: relative;
-      text-decoration: none;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-    }
-
-    .gallery-link img{
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .gallery-link .overlay{
-      position: absolute;
-      inset: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 18px;
-      background: rgba(0,0,0,0.45);
-      color: #fff;
-      font-weight: 900;
-      letter-spacing: 0.4px;
-      opacity: 0;
-      transition: opacity 0.18s ease;
-    }
-
-    .gallery-link:hover .overlay,
-    .gallery-link:focus-visible .overlay{
-      opacity: 1;
-    }
-
-    .gallery-link:focus-visible{
-      outline: 4px solid #111;
-      outline-offset: 4px;
-      border-radius: 18px;
-    }
-  </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
   <header class="hero">
     <div class="brand">
+      <div class="brand-inner">
 
-      <!-- Menu + Dropdown -->
-      <div class="menu">
-        <button
-          class="menu-btn"
-          id="menuBtn"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="dropdownMenu"
-          type="button"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <div class="dropdown" id="dropdownMenu" role="menu" aria-hidden="true">
-          <a href="#about_us" role="menuitem">About Us</a>
-          <a href="#kitchens" role="menuitem">Kitchens</a>
-          <a href="#bathrooms" role="menuitem">Bathrooms</a>
-          <a href="#garage-doors" role="menuitem">Garage Doors</a>
-          <a href="#composite-doors" role="menuitem">Composite Doors</a>
-          <a href="#plumbing" role="menuitem">Plumbing</a>
-          <a href="#electrical" role="menuitem">Electrical</a>
-          <a href="#joinery" role="menuitem">Joinery</a>
-          <a href="#flooring" role="menuitem">Flooring</a>
-          <a href="#contact_us" role="menuitem">Contact Us</a>
+        <div class="logo">
+          <img
+            src="/RedKiteRefurbishments/images/logos/red_kite_transparent_logo.png"
+            alt="Red Kite Refurbishment Logo"
+          />
         </div>
-      </div>
 
-      <!-- Logo -->
-      <div class="logo">
-        <img
-          src="images/logos/red_kite_transparent_logo.png"
-          alt="Red Kite Refurbishment Logo"
-        />
-      </div>
+        <div class="menu">
+          <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="dropdownMenu"
+            type="button"
+          >
+            <span></span><span></span><span></span>
+          </button>
 
+          <div class="dropdown" id="dropdownMenu" role="menu" aria-hidden="true">
+            <a href="#about_us" role="menuitem">About Us</a>
+            <a href="#kitchens" role="menuitem">Kitchens</a>
+            <a href="#bathrooms" role="menuitem">Bathrooms</a>
+            <a href="#garage-doors" role="menuitem">Garage Doors</a>
+            <a href="#composite-doors" role="menuitem">Composite Doors</a>
+            <a href="#joinery" role="menuitem">Joinery</a>
+            <a href="#flooring" role="menuitem">Flooring</a>
+            <a href="#contact_us" role="menuitem">Contact Us</a>
+          </div>
+        </div>
+
+      </div>
     </div>
 
-    <!-- Service tiles -->
     <nav class="tiles" aria-label="Services">
       <a class="tile kitchens" href="#kitchens">Kitchens</a>
       <a class="tile bathrooms" href="#bathrooms">Bathrooms</a>
       <a class="tile garage" href="#garage-doors">Garage Doors</a>
       <a class="tile composite" href="#composite-doors">Composite Doors</a>
-      <a class="tile plumbing" href="#plumbing">Plumbing</a>
-      <a class="tile electrical" href="#electrical">Electrical</a>
       <a class="tile joinery" href="#joinery">Joinery</a>
       <a class="tile flooring" href="#flooring">Flooring</a>
+      <a class="tile plumbing" href="#contact_us">Plumbing</a>
+      <a class="tile electrical" href="#contact_us">Electrical</a>
     </nav>
   </header>
 
-  <!-- PAGE SECTIONS -->
   <main>
 
-    <!-- KITCHENS -->
+    <section id="about_us">
+      <h2>About Us</h2>
+      <p>
+        Add your business story here (years experience, areas covered, specialisms, and what makes you different).
+      </p>
+    </section>
+
     <section id="kitchens">
       <h2>Kitchens</h2>
       <p>Kitchen refurbishment services.</p>
 
       <a class="gallery-link" href="kitchens.html" aria-label="Open Kitchens gallery page">
-        <img
-          src="images/example_images/kitchen_birch_plywood.png"
-          alt="Kitchen example (birch plywood)"
-        />
+        <img src="/RedKiteRefurbishments/images/example_images/kitchen_birch_plywood.png" alt="Kitchen example (birch plywood)">
         <div class="overlay">Click for gallery / information</div>
       </a>
     </section>
 
-    <!-- BATHROOMS -->
     <section id="bathrooms">
       <h2>Bathrooms</h2>
       <p>Bathroom refurbishment services.</p>
 
       <a class="gallery-link" href="bathrooms.html" aria-label="Open Bathrooms gallery page">
-        <img
-          src="images/example_images/bathroom_bath_slate_tiles.jpeg"
-          alt="Bathroom example (bath with slate tiles)"
-        />
+        <img src="/RedKiteRefurbishments/images/example_images/bathroom_bath_slate_tiles.jpeg" alt="Bathroom example (bath with slate tiles)">
         <div class="overlay">Click for gallery / information</div>
       </a>
     </section>
 
-    <!-- GARAGE DOORS -->
     <section id="garage-doors">
       <h2>Garage Doors</h2>
       <p>Garage door installation and upgrades.</p>
 
       <a class="gallery-link" href="garage_doors.html" aria-label="Open Garage Doors gallery page">
-        <img
-          src="images/example_images/extention_front_glass_door.jpeg"
-          alt="External door / entrance example"
-        />
+        <img src="/RedKiteRefurbishments/images/example_images/extention_front_glass_door.jpeg" alt="External frontage / door example">
         <div class="overlay">Click for gallery / information</div>
       </a>
     </section>
 
-    <!-- COMPOSITE DOORS -->
     <section id="composite-doors">
       <h2>Composite Doors</h2>
       <p>Secure and modern composite doors.</p>
 
       <a class="gallery-link" href="composite_doors.html" aria-label="Open Composite Doors gallery page">
-        <img
-          src="images/example_images/oak_doors.jpeg"
-          alt="Door example (oak doors reference)"
-        />
+        <img src="/RedKiteRefurbishments/images/example_images/oak_doors.jpeg" alt="Door example">
         <div class="overlay">Click for gallery / information</div>
       </a>
     </section>
 
-    <!-- PLUMBING (no dedicated gallery page requested, so link to bathrooms for now) -->
-    <section id="plumbing">
-      <h2>Plumbing</h2>
-      <p>Professional plumbing services.</p>
-
-      <a class="gallery-link" href="bathrooms.html" aria-label="Open related Plumbing gallery page">
-        <img
-          src="images/example_images/bathroom_sink_toilet.jpeg"
-          alt="Plumbing-related example (bathroom suite)"
-        />
-        <div class="overlay">Click for gallery / information</div>
-      </a>
-    </section>
-
-    <!-- ELECTRICAL (no dedicated gallery page requested, so link to joinery/showroom for now) -->
-    <section id="electrical">
-      <h2>Electrical</h2>
-      <p>Certified electrical work.</p>
-
-      <a class="gallery-link" href="joinery.html" aria-label="Open related Electrical gallery page">
-        <img
-          src="images/example_images/light_box_display.jpeg"
-          alt="Electrical-related example (light box display)"
-        />
-        <div class="overlay">Click for gallery / information</div>
-      </a>
-    </section>
-
-    <!-- JOINERY -->
     <section id="joinery">
       <h2>Joinery</h2>
       <p>Joinery and bespoke carpentry services.</p>
 
       <a class="gallery-link" href="joinery.html" aria-label="Open Joinery gallery page">
-        <img
-          src="images/example_images/custom_floating_bed_landscape.jpeg"
-          alt="Joinery example (custom floating bed)"
-        />
+        <img src="/RedKiteRefurbishments/images/example_images/custom_floating_bed_landscape.jpeg" alt="Joinery example (custom floating bed)">
         <div class="overlay">Click for gallery / information</div>
       </a>
     </section>
 
-    <!-- FLOORING -->
     <section id="flooring">
       <h2>Flooring</h2>
       <p>Flooring installation and refurbishment services.</p>
 
       <a class="gallery-link" href="flooring.html" aria-label="Open Flooring gallery page">
-        <img
-          src="images/example_images/lvt_flooring_wooden.jpeg"
-          alt="Flooring example (wood effect LVT)"
-        />
+        <img src="/RedKiteRefurbishments/images/example_images/lvt_flooring_wooden.jpeg" alt="Flooring example (wood effect LVT)">
         <div class="overlay">Click for gallery / information</div>
       </a>
     </section>
 
+    <section id="contact_us">
+      <h2>Contact Us</h2>
+      <p>
+        Add your phone number, email and area coverage here (and a contact form later if you want).
+      </p>
+    </section>
+
   </main>
 
-  <!-- ✅ Script goes HERE (bottom of body) -->
   <script>
     const menuBtn = document.getElementById("menuBtn");
     const dropdown = document.getElementById("dropdownMenu");
@@ -250,15 +155,12 @@
       menuBtn.setAttribute("aria-expanded", String(isOpen));
     });
 
-    // Close if you click anywhere else
     document.addEventListener("click", closeMenu);
 
-    // Close when you click a link in the menu
     dropdown.addEventListener("click", (e) => {
       if (e.target.tagName === "A") closeMenu();
     });
 
-    // Close on Escape key
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") closeMenu();
     });
@@ -266,3 +168,4 @@
 
 </body>
 </html>
+<!---->
