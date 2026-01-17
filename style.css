@@ -1,3 +1,7 @@
+/* =========================
+   style.css (REPLACE ALL)
+   ========================= */
+
 :root {
   --orange-left: #e9892e;
   --yellow: #f2f447;
@@ -15,7 +19,9 @@ body {
   color: var(--text);
 }
 
-/* HERO LAYOUT */
+/* =========================
+   HERO LAYOUT
+   ========================= */
 .hero {
   display: grid;
   grid-template-columns: 38% 62%;
@@ -26,25 +32,24 @@ body {
 /* LEFT PANEL */
 .brand {
   background: var(--orange-left);
-  position: relative; /* so we can pin menu to top-right */
+  position: relative;               /* anchor menu top-right */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px;
 }
 
-/* LOGO */
-.logo {
-  text-align: center;
-}
-
+/* LOGO (larger) */
+.logo { text-align: center; }
 .logo img {
-  max-width: 280px;
+  max-width: 340px;
   width: 100%;
   height: auto;
 }
+@media (max-width: 900px) { .logo img { max-width: 280px; } }
+@media (max-width: 600px) { .logo img { max-width: 240px; } }
 
-/* MENU (top-right of orange square) */
+/* MENU pinned to top-right of orange panel */
 .menu {
   position: absolute;
   top: 20px;
@@ -52,7 +57,7 @@ body {
   z-index: 200;
 }
 
-/* MENU BUTTON */
+/* MENU BUTTON (scales down with breakpoints) */
 .menu-btn {
   width: 54px;
   height: 54px;
@@ -74,7 +79,7 @@ body {
 
 .menu-btn,
 .menu-btn span {
-  transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease;
+  transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease, border-width 0.2s ease;
 }
 
 /* Dropdown panel */
@@ -139,7 +144,9 @@ body {
 .joinery { background: var(--orange-tile); }
 .flooring { background: var(--brown); }
 
-/* FULL-WIDTH SECTIONS */
+/* =========================
+   SECTIONS
+   ========================= */
 main { width: 100%; margin: 0; padding: 0; }
 
 section {
@@ -165,8 +172,19 @@ section h2 {
 section p {
   font-size: 18px;
   line-height: 1.6;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 0 18px;
+}
+
+.section-links {
+  margin-top: 10px;
+  font-weight: 800;
+}
+
+.section-links a {
+  color: #111;
+  text-decoration: underline;
+  font-weight: 900;
 }
 
 /* Section backgrounds (match tiles) */
@@ -182,11 +200,13 @@ section p {
 #joinery { background: var(--orange-tile); }
 #flooring { background: var(--brown); }
 
-/* CLICKABLE SECTION IMAGE (hover overlay) */
-.gallery-link {
+/* =========================
+   SECTION SLIDESHOW (one image, swaps every 3s)
+   ========================= */
+.section-slideshow {
   display: block;
   max-width: 900px;
-  margin: 18px 0 0;
+  margin-top: 18px;
   border-radius: 16px;
   overflow: hidden;
   position: relative;
@@ -194,21 +214,26 @@ section p {
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
-.gallery-link img {
+.section-slideshow img {
   width: 100%;
-  height: auto;
+  height: 340px;
+  object-fit: cover;
   display: block;
 }
 
-.gallery-link .overlay {
+@media (max-width: 600px) {
+  .section-slideshow img { height: 240px; }
+}
+
+.section-slideshow .overlay {
   position: absolute;
   inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 18px;
-  background: rgba(0,0,0,0.45);
+  text-align: center;
+  background: rgba(0,0,0,0.42);
   color: #fff;
   font-weight: 900;
   letter-spacing: 0.4px;
@@ -216,18 +241,14 @@ section p {
   transition: opacity 0.18s ease;
 }
 
-.gallery-link:hover .overlay,
-.gallery-link:focus-visible .overlay {
+.section-slideshow:hover .overlay,
+.section-slideshow:focus-visible .overlay {
   opacity: 1;
 }
 
-.gallery-link:focus-visible {
-  outline: 4px solid #111;
-  outline-offset: 4px;
-  border-radius: 18px;
-}
-
-/* GALLERY PAGES (neat small grid + rounded corners) */
+/* =========================
+   GALLERY PAGES (grid + rounded photos)
+   ========================= */
 .page {
   max-width: 1100px;
   margin: 0 auto;
@@ -236,20 +257,43 @@ section p {
 
 .topbar {
   display: flex;
-  gap: 12px;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  gap: 12px;
+  flex-wrap: nowrap; /* don't wrap -> keeps button level */
+}
+
+.topbar h1 {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: clamp(18px, 2vw, 34px);
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .back {
+  flex: 0 0 auto;
+  margin-left: auto;
+  white-space: nowrap;
   display: inline-block;
   padding: 10px 14px;
   border-radius: 10px;
   background: #111;
   color: #fff;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 900;
+}
+
+@media (max-width: 420px) {
+  .topbar { flex-wrap: wrap; }
+  .topbar h1 {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    flex-basis: 100%;
+  }
 }
 
 .intro {
@@ -260,7 +304,7 @@ section p {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* smaller, neater cards */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 14px;
 }
 
@@ -274,10 +318,10 @@ figure {
 
 figure img {
   width: 100%;
-  height: 170px;          /* smaller neat thumbnails */
+  height: 170px;
   object-fit: cover;
   display: block;
-  border-radius: 14px 14px 0 0; /* slightly rounded corners on photo */
+  border-radius: 14px 14px 0 0;
 }
 
 figcaption {
@@ -295,20 +339,62 @@ figcaption span {
   line-height: 1.5;
 }
 
-/* RESPONSIVE: stack tiles below orange square on small screens */
+/* Gallery page background colours */
+body.page-kitchens { background: var(--yellow); }
+body.page-bathrooms { background: var(--green); }
+body.page-garage { background: var(--brown); }
+body.page-composite { background: var(--orange-tile); }
+body.page-joinery { background: var(--orange-tile); }
+body.page-flooring { background: var(--brown); }
+body.page-plumbing { background: var(--green); }
+body.page-electrical { background: var(--yellow); }
+
+/* =========================
+   LIGHTBOX (gallery image opens larger)
+   ========================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  z-index: 9999;
+}
+
+.lightbox.open { display: flex; }
+
+.lightbox img {
+  max-width: min(1100px, 96vw);
+  max-height: 86vh;
+  border-radius: 14px;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.5);
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #111;
+  color: #fff;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE: tiles go below orange panel
+   ========================= */
 @media (max-width: 900px) {
   .hero {
-    grid-template-columns: 1fr; /* orange panel on top, tiles underneath */
+    grid-template-columns: 1fr; /* orange on top, tiles underneath */
     height: auto;
   }
 
-  /* Logo and menu shrink together */
-  .logo img { max-width: 240px; }
-
-  .menu {
-    top: 16px;
-    right: 16px;
-  }
+  .menu { top: 16px; right: 16px; }
 
   .menu-btn {
     width: 46px;
@@ -322,19 +408,11 @@ figcaption span {
     margin: 5px auto;
   }
 
-  /* Make the tile section a sensible height */
-  .tiles {
-    min-height: 520px;
-  }
+  .tiles { min-height: 520px; }
 }
 
 @media (max-width: 600px) {
-  .logo img { max-width: 210px; }
-
-  .menu {
-    top: 14px;
-    right: 14px;
-  }
+  .menu { top: 14px; right: 14px; }
 
   .menu-btn {
     width: 40px;
@@ -348,126 +426,11 @@ figcaption span {
     margin: 4px auto;
   }
 
-  .dropdown {
-    min-width: 220px;
-  }
+  .dropdown { min-width: 220px; }
 
   .gallery {
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   }
 
-  figure img {
-    height: 150px;
-  }
-}
-
-/* ---------- GALLERY PAGE HEADER ALIGNMENT ---------- */
-.topbar {
-  display: flex;
-  align-items: center;       /* keeps them level */
-  justify-content: space-between;
-  gap: 12px;
-  flex-wrap: nowrap;         /* prevents weird stacking */
-}
-
-.topbar h1 {
-  margin: 0;
-  flex: 1;                   /* title takes remaining space */
-  min-width: 0;
-  font-size: clamp(22px, 2.4vw, 34px);
-  line-height: 1.2;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;   /* long titles won't push button down */
-}
-
-.back {
-  flex: 0 0 auto;
-  white-space: nowrap;
-}
-
-/* On small screens, allow wrap neatly */
-@media (max-width: 600px) {
-  .topbar {
-    flex-wrap: wrap;
-  }
-  .topbar h1 {
-    white-space: normal;
-    overflow: visible;
-    text-overflow: unset;
-    flex-basis: 100%;
-  }
-}
-
-/* ---------- SECTION TEXT + CONTACT LINK ---------- */
-.section-links {
-  margin-top: 10px;
-  font-weight: 700;
-}
-
-.section-links a {
-  color: #111;
-  text-decoration: underline;
-  font-weight: 900;
-}
-
-/* ---------- SCROLLING IMAGE STRIP (CAROUSEL) ---------- */
-.carousel {
-  margin-top: 18px;
-  display: flex;
-  gap: 12px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-}
-
-.carousel::-webkit-scrollbar {
-  height: 10px;
-}
-
-.carousel-item {
-  flex: 0 0 auto;
-  width: 260px;
-  height: 170px;
-  border-radius: 14px;
-  overflow: hidden;
-  position: relative;
-  scroll-snap-align: start;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-  text-decoration: none;
-}
-
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.carousel-item .overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px;
-  text-align: center;
-  background: rgba(0,0,0,0.42);
-  color: #fff;
-  font-weight: 900;
-  opacity: 0;
-  transition: opacity 0.18s ease;
-}
-
-.carousel-item:hover .overlay,
-.carousel-item:focus-visible .overlay {
-  opacity: 1;
-}
-
-@media (max-width: 600px) {
-  .carousel-item {
-    width: 220px;
-    height: 150px;
-  }
+  figure img { height: 150px; }
 }
