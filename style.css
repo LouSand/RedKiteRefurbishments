@@ -382,3 +382,55 @@ figcaption span {
   .topbar { flex-wrap: wrap; }
   .topbar h1 { white-space: normal; }
 }
+
+/* =====================
+   ABOUT & CONTACT PAGES
+   ===================== */
+
+.theme-about {
+  background: #f6f4ef; /* warm neutral */
+}
+
+.theme-contact {
+  background: #eef2f1; /* soft grey-green */
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem 3rem;
+}
+
+.text-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.text-card h2 {
+  margin-top: 0;
+  color: #2c2c2c;
+  font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+}
+
+.text-card p,
+.text-card li {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+.about-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-list li {
+  margin-bottom: 0.6rem;
+}
+
+.contact-card p {
+  font-size: 1.05rem;
+}
