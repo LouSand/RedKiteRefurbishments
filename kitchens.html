@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Kitchens | Red Kite Refurbishments</title>
-  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css">
+  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css?v=20260117">
 </head>
+
 <body class="theme-kitchens">
   <div class="page">
     <div class="topbar">
@@ -17,51 +18,57 @@
 
     <div class="gallery">
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/hidden_kitchen_birch_plywood.png" alt="Hidden birch plywood kitchen behind sliding doors">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/hidden_kitchen_birch_plywood.png" alt="Hidden birch plywood kitchen behind sliding doors">
         <figcaption><strong>Hidden kitchen</strong><span>Concealed design behind sliding panels—ideal for open-plan spaces.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/kitchen_birch_plywood.png" alt="Birch plywood kitchen">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/kitchen_birch_plywood.png" alt="Birch plywood kitchen">
         <figcaption><strong>Birch plywood kitchen</strong><span>Warm, modern cabinetry with clean lines and durable finish.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/kitchen_birch_plywood_cupboard.png" alt="Birch plywood cupboard detail">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/kitchen_birch_plywood_cupboard.png" alt="Birch plywood cupboard detail">
         <figcaption><strong>Cabinet detail</strong><span>Close-up showing joinery and finishing detail.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/kitchen_breakfast_bar.jpeg" alt="Kitchen breakfast bar">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/kitchen_breakfast_bar.jpeg" alt="Kitchen breakfast bar">
         <figcaption><strong>Breakfast bar</strong><span>Social seating and extra prep space.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/kitchen_side.jpeg" alt="Side angle of kitchen">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/kitchen_side.jpeg" alt="Side angle of kitchen">
         <figcaption><strong>Kitchen layout</strong><span>Alternative angle showing flow and alignment.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/service_pass_professional_kitchen.jpeg" alt="Service pass in professional kitchen">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/service_pass_professional_kitchen.jpeg" alt="Service pass in professional kitchen">
         <figcaption><strong>Service pass</strong><span>Clean pass-through style for entertaining and service.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/arabescato_vagli_marble_bookmatched.jpeg" alt="Arabescato Vagli marble bookmatched">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/arabescato_vagli_marble_bookmatched.jpeg" alt="Arabescato Vagli marble bookmatched">
         <figcaption><strong>Bookmatched marble</strong><span>Premium stone with mirrored veining.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/carrara_marble_veinmatched_island.jpeg" alt="Carrara marble veinmatched island">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/carrara_marble_veinmatched_island.jpeg" alt="Carrara marble veinmatched island">
         <figcaption><strong>Vein-matched island</strong><span>Continuous veining across the island surface.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/oyster_quartzite_splitface.jpeg" alt="Oyster quartzite splitface">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/oyster_quartzite_splitface.jpeg" alt="Oyster quartzite splitface">
         <figcaption><strong>Split-face quartzite</strong><span>Textured feature finish for impact areas.</span></figcaption>
       </figure>
     </div>
   </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="/RedKiteRefurbishments/scripts.js?v=20260117" defer></script>
 </body>
 </html>
-<!---->

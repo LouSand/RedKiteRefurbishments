@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flooring | Red Kite Refurbishments</title>
-  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css">
+  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css?v=20260117">
 </head>
+
 <body class="theme-flooring">
   <div class="page">
     <div class="topbar">
@@ -17,26 +18,32 @@
 
     <div class="gallery">
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/lvt_flooring.jpeg" alt="LVT flooring">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/lvt_flooring.jpeg" alt="LVT flooring">
         <figcaption><strong>LVT flooring</strong><span>Hard-wearing and easy to maintain.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/lvt_flooring_wooden.jpeg" alt="Wood-effect LVT flooring">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/lvt_flooring_wooden.jpeg" alt="Wood-effect LVT flooring">
         <figcaption><strong>Wood-effect LVT</strong><span>Natural look with practical performance.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/wood_LVT_flooring.jpeg" alt="Wood LVT flooring">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/wood_LVT_flooring.jpeg" alt="Wood LVT flooring">
         <figcaption><strong>Wood LVT finish</strong><span>Close-up of grain pattern and finish quality.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/flooring_edges.jpeg" alt="Flooring edge details">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/flooring_edges.jpeg" alt="Flooring edge details">
         <figcaption><strong>Edge detailing</strong><span>Clean transitions for a professional long-lasting fit.</span></figcaption>
       </figure>
     </div>
   </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="/RedKiteRefurbishments/scripts.js?v=20260117" defer></script>
 </body>
 </html>
-<!---->

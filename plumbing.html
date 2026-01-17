@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Plumbing | Red Kite Refurbishments</title>
-  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css">
+  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css?v=20260117">
 </head>
+
 <body class="theme-plumbing">
   <div class="page">
     <div class="topbar">
@@ -19,14 +20,22 @@
 
     <div class="gallery">
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/bathroom_sink_toilet.jpeg" alt="Bathroom suite plumbing">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/bathroom_sink_toilet.jpeg" alt="Bathroom suite plumbing">
         <figcaption><strong>Suite installation</strong><span>Plumbing and fit-out for sink and toilet connections.</span></figcaption>
       </figure>
+
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/bathroom_sink_slate_tiles.jpeg" alt="Vanity plumbing detail">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/bathroom_sink_slate_tiles.jpeg" alt="Vanity plumbing detail">
         <figcaption><strong>Vanity plumbing</strong><span>Neat plumbing and finishing around the sink area.</span></figcaption>
       </figure>
     </div>
   </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="/RedKiteRefurbishments/scripts.js?v=20260117" defer></script>
 </body>
 </html>

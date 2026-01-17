@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Electrical | Red Kite Refurbishments</title>
-  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css">
+  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css?v=20260117">
 </head>
+
 <body class="theme-electrical">
   <div class="page">
     <div class="topbar">
@@ -19,15 +20,22 @@
 
     <div class="gallery">
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/light_box_display.jpeg" alt="Light box display">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/light_box_display.jpeg" alt="Light box display">
         <figcaption><strong>Lighting feature</strong><span>Example of electrical work supporting a lit display installation.</span></figcaption>
       </figure>
+
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/showroom.jpeg" alt="Showroom fit-out">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/showroom.jpeg" alt="Showroom fit-out">
         <figcaption><strong>Fit-out support</strong><span>Electrical works integrated into a wider refurbishment.</span></figcaption>
       </figure>
     </div>
   </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="/RedKiteRefurbishments/scripts.js?v=20260117" defer></script>
 </body>
 </html>
-<!-- sdfsd -->

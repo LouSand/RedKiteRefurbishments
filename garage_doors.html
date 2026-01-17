@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Garage Doors | Red Kite Refurbishments</title>
-  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css" />
+  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css?v=20260117" />
 </head>
+
 <body class="theme-garage">
   <div class="page">
     <div class="topbar">
@@ -20,7 +21,7 @@
 
     <div class="gallery">
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/extention_front_glass_door.jpeg" alt="Front glass door extension view">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/extention_front_glass_door.jpeg" alt="Front glass door extension view">
         <figcaption>
           <strong>External frontage upgrade</strong>
           <span>External upgrades can be paired with new doors for improved curb appeal and security.</span>
@@ -28,7 +29,7 @@
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/extention_glass.jpeg" alt="Glass extension">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/extention_glass.jpeg" alt="Glass extension">
         <figcaption>
           <strong>Extension glazing</strong>
           <span>Example of exterior improvements that complement new door/entry installations.</span>
@@ -36,6 +37,12 @@
       </figure>
     </div>
   </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <script src="/RedKiteRefurbishments/scripts.js?v=20260117" defer></script>
 </body>
 </html>
-<!---->
