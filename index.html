@@ -1,6 +1,3 @@
-<!-- =========================
-     index.html (REPLACE ALL)
-     ========================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,76 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Red Kite Refurbishment</title>
 
-  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css">
+  <!-- If your site is hosted in /RedKiteRefurbishments/ keep this.
+       If you ever view locally, switch to:  href="style.css?v=20260117" -->
+  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css?v=20260117">
 </head>
 
 <body>
 
-  
-<!-- HERO -->
-<header class="hero">
-  <div class="brand">
+  <!-- HERO -->
+  <header class="hero">
+    <div class="brand">
 
-    <!-- Menu pinned top-right of orange panel -->
-    <div class="menu">
-      <button
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Open menu"
-        aria-expanded="false"
-        aria-controls="dropdownMenu"
-        type="button"
-      >
-        <span></span><span></span><span></span>
-      </button>
+      <!-- Menu pinned top-right of orange panel -->
+      <div class="menu">
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="dropdownMenu"
+          type="button"
+        >
+          <span></span><span></span><span></span>
+        </button>
 
-      <div class="dropdown" id="dropdownMenu" role="menu" aria-hidden="true">
-        <a href="about_us.html" role="menuitem">About Us</a>
-        <a href="kitchens.html" role="menuitem">Kitchens</a>
-        <a href="bathrooms.html" role="menuitem">Bathrooms</a>
-        <a href="garage_doors.html" role="menuitem">Garage Doors</a>
-        <a href="composite_doors.html" role="menuitem">Composite Doors</a>
-        <a href="plumbing.html" role="menuitem">Plumbing</a>
-        <a href="electrical.html" role="menuitem">Electrical</a>
-        <a href="joinery.html" role="menuitem">Joinery</a>
-        <a href="flooring.html" role="menuitem">Flooring</a>
-        <a href="contact_us.html" role="menuitem">Contact Us</a>
+        <div class="dropdown" id="dropdownMenu" role="menu" aria-hidden="true">
+          <a href="about.html" role="menuitem">About Us</a>
+          <a href="kitchens.html" role="menuitem">Kitchens</a>
+          <a href="bathrooms.html" role="menuitem">Bathrooms</a>
+          <a href="garage_doors.html" role="menuitem">Garage Doors</a>
+          <a href="composite_doors.html" role="menuitem">Composite Doors</a>
+          <a href="plumbing.html" role="menuitem">Plumbing</a>
+          <a href="electrical.html" role="menuitem">Electrical</a>
+          <a href="joinery.html" role="menuitem">Joinery</a>
+          <a href="flooring.html" role="menuitem">Flooring</a>
+          <a href="contact.html" role="menuitem">Contact Us</a>
+        </div>
       </div>
-    </div> <!-- ✅ CLOSE .menu -->
 
-    <!-- Logo centered -->
-    <div class="logo">
-      <img
-        src="/RedKiteRefurbishments/images/logos/red_kite_transparent_logo.png"
-        alt="Red Kite Refurbishment Logo"
-      />
+      <!-- Logo centered -->
+      <div class="logo">
+        <img
+          src="/RedKiteRefurbishments/images/logos/red_kite_transparent_logo.png"
+          alt="Red Kite Refurbishment Logo"
+        />
+      </div>
     </div>
 
-  </div> <!-- ✅ CLOSE .brand -->
+    <!-- Service tiles -->
+    <nav class="tiles" aria-label="Services">
+      <a class="tile kitchens" href="kitchens.html">Kitchens</a>
+      <a class="tile bathrooms" href="bathrooms.html">Bathrooms</a>
+      <a class="tile garage" href="garage_doors.html">Garage Doors</a>
+      <a class="tile composite" href="composite_doors.html">Composite Doors</a>
+      <a class="tile plumbing" href="plumbing.html">Plumbing</a>
+      <a class="tile electrical" href="electrical.html">Electrical</a>
+      <a class="tile joinery" href="joinery.html">Joinery</a>
+      <a class="tile flooring" href="flooring.html">Flooring</a>
+    </nav>
+  </header>
 
-  <!-- Service tiles -->
-  <nav class="tiles" aria-label="Services">
-    <a class="tile kitchens" href="kitchens.html">Kitchens</a>
-    <a class="tile bathrooms" href="bathrooms.html">Bathrooms</a>
-    <a class="tile garage" href="garage_doors.html">Garage Doors</a>
-    <a class="tile composite" href="composite_doors.html">Composite Doors</a>
-    <a class="tile plumbing" href="plumbing.html">Plumbing</a>
-    <a class="tile electrical" href="electrical.html">Electrical</a>
-    <a class="tile joinery" href="joinery.html">Joinery</a>
-    <a class="tile flooring" href="flooring.html">Flooring</a>
-  </nav>
-
-</header>
-
-<main>
-
+  <main>
 
     <!-- KITCHENS -->
     <section id="kitchens">
       <h2>Kitchens</h2>
       <p>
         From cabinetry and layout improvements to premium stone finishes, we create kitchens that work beautifully day-to-day.
-        For quotes or enquiries, <a class="contact-link" href="contact_us.html">Contact Us</a>.
+        For quotes or enquiries, <a class="contact-link" href="contact.html">Contact Us</a>.
         Click the image to view the full gallery and more information.
       </p>
 
@@ -92,7 +87,7 @@
       <h2>Bathrooms</h2>
       <p>
         Bathroom refurbishments with smart layouts, reliable installation, and finishes chosen for longevity.
-        For quotes or enquiries, <a class="contact-link" href="mailto:info@redkite-refurbishments.co.uk">Contact Us</a>.
+        For quotes or enquiries, <a class="contact-link" href="contact.html">Contact Us</a>.
         Click the image to view the full gallery and more information.
       </p>
 
@@ -107,7 +102,7 @@
       <h2>Garage Doors</h2>
       <p>
         Garage door upgrades and related exterior improvements to enhance security, function, and kerb appeal.
-        For quotes or enquiries, <a class="contact-link" href="mailto:info@redkite-refurbishments.co.uk">Contact Us</a>.
+        For quotes or enquiries, <a class="contact-link" href="contact.html">Contact Us</a>.
         Click the image to view the full gallery and more information.
       </p>
 
@@ -122,7 +117,7 @@
       <h2>Composite Doors</h2>
       <p>
         Modern composite doors installed with careful finishing for a secure, weatherproof upgrade.
-        For quotes or enquiries, <a class="contact-link" href="mailto:info@redkite-refurbishments.co.uk">Contact Us</a>.
+        For quotes or enquiries, <a class="contact-link" href="contact.html">Contact Us</a>.
         Click the image to view the full gallery and more information.
       </p>
 
@@ -137,7 +132,7 @@
       <h2>Plumbing</h2>
       <p>
         Professional plumbing work completed neatly and reliably, from upgrades to full refurb support.
-        For quotes or enquiries, <a class="contact-link" href="mailto:info@redkite-refurbishments.co.uk">Contact Us</a>.
+        For quotes or enquiries, <a class="contact-link" href="contact.html">Contact Us</a>.
         Click the image to view the full gallery and more information.
       </p>
 
@@ -152,7 +147,7 @@
       <h2>Electrical</h2>
       <p>
         Safe, certified electrical work delivered as part of renovations or as standalone upgrades.
-        For quotes or enquiries, <a class="contact-link" href="mailto:info@redkite-refurbishments.co.uk">Contact Us</a>.
+        For quotes or enquiries, <a class="contact-link" href="contact.html">Contact Us</a>.
         Click the image to view the full gallery and more information.
       </p>
 
@@ -167,7 +162,7 @@
       <h2>Joinery</h2>
       <p>
         Bespoke joinery including fitted furniture and custom builds finished with clean detailing.
-        For quotes or enquiries, <a class="contact-link" href="mailto:info@redkite-refurbishments.co.uk">Contact Us</a>.
+        For quotes or enquiries, <a class="contact-link" href="contact.html">Contact Us</a>.
         Click the image to view the full gallery and more information.
       </p>
 
@@ -182,7 +177,7 @@
       <h2>Flooring</h2>
       <p>
         Flooring installations with tidy edges, durable materials, and a finish that stays looking great.
-        For quotes or enquiries, <a class="contact-link" href="mailto:info@redkite-refurbishments.co.uk">Contact Us</a>.
+        For quotes or enquiries, <a class="contact-link" href="contact.html">Contact Us</a>.
         Click the image to view the full gallery and more information.
       </p>
 
@@ -194,100 +189,7 @@
 
   </main>
 
-  <!-- MENU SCRIPT -->
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const dropdown = document.getElementById("dropdownMenu");
-
-    function closeMenu() {
-      dropdown.classList.remove("open");
-      dropdown.setAttribute("aria-hidden", "true");
-      menuBtn.setAttribute("aria-expanded", "false");
-    }
-
-    menuBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      const isOpen = dropdown.classList.toggle("open");
-      dropdown.setAttribute("aria-hidden", String(!isOpen));
-      menuBtn.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    document.addEventListener("click", closeMenu);
-
-    dropdown.addEventListener("click", (e) => {
-      if (e.target.tagName === "A") closeMenu();
-    });
-
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeMenu();
-    });
-  </script>
-
-  <!-- SLIDESHOW SCRIPT (swaps every 3 seconds) -->
-  <script>
-    const slideshows = {
-      kitchens: [
-        "/RedKiteRefurbishments/images/example_images/kitchen_birch_plywood.png",
-        "/RedKiteRefurbishments/images/example_images/hidden_kitchen_birch_plywood.png",
-        "/RedKiteRefurbishments/images/example_images/kitchen_breakfast_bar.jpeg",
-        "/RedKiteRefurbishments/images/example_images/carrara_marble_veinmatched_island.jpeg"
-      ],
-      bathrooms: [
-        "/RedKiteRefurbishments/images/example_images/bathroom_bath_slate_tiles.jpeg",
-        "/RedKiteRefurbishments/images/example_images/bathroom_black_slate_flooring.jpeg",
-        "/RedKiteRefurbishments/images/example_images/bathroom_sink_slate_tiles.jpeg",
-        "/RedKiteRefurbishments/images/example_images/bathroom_sink_toilet.jpeg",
-        "/RedKiteRefurbishments/images/example_images/bathroom&flooring.jpeg"
-      ],
-      garage: [
-        "/RedKiteRefurbishments/images/example_images/extention_front_glass_door.jpeg",
-        "/RedKiteRefurbishments/images/example_images/extention_glass.jpeg"
-      ],
-      composite: [
-        "/RedKiteRefurbishments/images/example_images/oak_doors.jpeg"
-      ],
-      plumbing: [
-        "/RedKiteRefurbishments/images/example_images/bathroom_sink_toilet.jpeg",
-        "/RedKiteRefurbishments/images/example_images/bathroom_sink_slate_tiles.jpeg"
-      ],
-      electrical: [
-        "/RedKiteRefurbishments/images/example_images/light_box_display.jpeg",
-        "/RedKiteRefurbishments/images/example_images/showroom.jpeg"
-      ],
-      joinery: [
-        "/RedKiteRefurbishments/images/example_images/custom_floating_bed_landscape.jpeg",
-        "/RedKiteRefurbishments/images/example_images/murphy_bed.png",
-        "/RedKiteRefurbishments/images/example_images/reception_desk.jpeg",
-        "/RedKiteRefurbishments/images/example_images/bar_with_trim.jpeg"
-      ],
-      flooring: [
-        "/RedKiteRefurbishments/images/example_images/lvt_flooring_wooden.jpeg",
-        "/RedKiteRefurbishments/images/example_images/lvt_flooring.jpeg",
-        "/RedKiteRefurbishments/images/example_images/flooring_edges.jpeg",
-        "/RedKiteRefurbishments/images/example_images/wood_LVT_flooring.jpeg"
-      ]
-    };
-
-    function startSlideshow(key, imgId) {
-      const img = document.getElementById(imgId);
-      if (!img || !slideshows[key] || slideshows[key].length === 0) return;
-
-      let i = 0;
-      setInterval(() => {
-        i = (i + 1) % slideshows[key].length;
-        img.src = slideshows[key][i];
-      }, 3000);
-    }
-
-    startSlideshow("kitchens", "slideshow-kitchens");
-    startSlideshow("bathrooms", "slideshow-bathrooms");
-    startSlideshow("garage", "slideshow-garage");
-    startSlideshow("composite", "slideshow-composite");
-    startSlideshow("plumbing", "slideshow-plumbing");
-    startSlideshow("electrical", "slideshow-electrical");
-    startSlideshow("joinery", "slideshow-joinery");
-    startSlideshow("flooring", "slideshow-flooring");
-  </script>
-
+  <!-- External JS -->
+  <script src="/RedKiteRefurbishments/scripts.js?v=20260117" defer></script>
 </body>
 </html>

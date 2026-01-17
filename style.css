@@ -124,6 +124,18 @@ body {
   transition: transform 0.08s ease, filter 0.08s ease;
 }
 
+.tile {
+  border-radius: 18px;
+  overflow: hidden; /* this is what clips the image corners */
+  position: relative;
+}
+
+.tiles {
+  gap: 12px;
+  padding: 12px;
+}
+
+
 .tile:hover { filter: brightness(0.96); }
 .tile:active { transform: scale(0.98); }
 
@@ -208,7 +220,16 @@ a.contact-link:focus-visible {
   height: 280px;
   object-fit: cover;
   display: block;
+
+  border-radius: inherit;   /* keeps corners rounded */
+  opacity: 1;
+  transition: opacity 0.9s ease;  /* fade speed */
 }
+
+.section-slideshow img.is-fading {
+  opacity: 0;
+}
+
 
 @media (max-width: 600px) {
   .section-slideshow img { height: 220px; }
