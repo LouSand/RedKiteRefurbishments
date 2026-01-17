@@ -113,3 +113,36 @@ document.addEventListener("DOMContentLoaded", () => {
   startSlideshow("joinery", "slideshow-joinery");
   startSlideshow("flooring", "slideshow-flooring");
 });
+
+
+// =====================
+// GALLERY LIGHTBOX
+// =====================
+document.addEventListener("click", (e) => {
+  const img = e.target.closest(".lightbox-img");
+  if (!img) return;
+
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightbox-img");
+
+  lightboxImg.src = img.src;
+  lightbox.classList.add("open");
+  lightbox.setAttribute("aria-hidden", "false");
+});
+
+document.addEventListener("click", (e) => {
+  const lightbox = document.getElementById("lightbox");
+  if (!lightbox || !lightbox.classList.contains("open")) return;
+
+  if (e.target === lightbox) {
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    const lightbox = document.getElementById("lightbox");
+    if (lightbox) lightbox.classList.remove("open");
+  }
+});

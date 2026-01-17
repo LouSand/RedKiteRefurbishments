@@ -4,8 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bathrooms | Red Kite Refurbishments</title>
-  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css">
+
+  <link rel="stylesheet" href="/RedKiteRefurbishments/style.css?v=20260117">
 </head>
+
 <body class="theme-bathrooms">
   <div class="page">
     <div class="topbar">
@@ -17,30 +19,39 @@
 
     <div class="gallery">
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/bathroom_bath_slate_tiles.jpeg" alt="Bath with slate tile surround">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/bathroom_bath_slate_tiles.jpeg" alt="Bath with slate tile surround">
         <figcaption><strong>Bath + slate tiling</strong><span>Durable slate-style tiling with clean alignment and grout lines.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/bathroom_black_slate_flooring.jpeg" alt="Black slate bathroom flooring">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/bathroom_black_slate_flooring.jpeg" alt="Black slate bathroom flooring">
         <figcaption><strong>Slate-effect flooring</strong><span>Hard-wearing finish with a modern, premium look.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/bathroom_sink_slate_tiles.jpeg" alt="Bathroom sink with slate tile backdrop">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/bathroom_sink_slate_tiles.jpeg" alt="Bathroom sink with slate tile backdrop">
         <figcaption><strong>Vanity + tiling</strong><span>Neat finishing around fixtures for a crisp final result.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/bathroom_sink_toilet.jpeg" alt="Bathroom sink and toilet suite">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/bathroom_sink_toilet.jpeg" alt="Bathroom sink and toilet suite">
         <figcaption><strong>Suite installation</strong><span>Practical layout with tidy plumbing and fit-out.</span></figcaption>
       </figure>
 
       <figure>
-        <img src="/RedKiteRefurbishments/images/example_images/bathroom&flooring.jpeg" alt="Bathroom and flooring detail">
+        <img class="lightbox-img" src="/RedKiteRefurbishments/images/example_images/bathroom&flooring.jpeg" alt="Bathroom and flooring detail">
         <figcaption><strong>Finishing detail</strong><span>Shows how bathroom finishes can integrate with adjoining flooring.</span></figcaption>
       </figure>
     </div>
   </div>
+
+  <!-- Lightbox (add this once per gallery page) -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <img id="lightbox-img" alt="">
+  </div>
+
+  <!-- If you're using scripts.js site-wide, keep this.
+       If not, you can paste the JS inline instead (tell me and I’ll give it). -->
+  <script src="/RedKiteRefurbishments/scripts.js?v=20260117" defer></script>
 </body>
 </html>
