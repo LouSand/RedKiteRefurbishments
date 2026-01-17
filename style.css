@@ -130,10 +130,12 @@ body {
   position: relative;
 }
 
+/* HOME TILES: touching, no white border */
 .tiles {
-  gap: 12px;
-  padding: 12px;
+  gap: 0;
+  padding: 0;
 }
+
 
 
 .tile:hover { filter: brightness(0.96); }
