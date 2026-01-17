@@ -434,3 +434,52 @@ figcaption span {
 .contact-card p {
   font-size: 1.05rem;
 }
+
+/* About page: title left, back button right */
+.theme-about .topbar {
+  flex-direction: row;
+}
+
+.theme-about .topbar h1 {
+  order: 1;
+}
+
+.theme-about .topbar .back {
+  order: 2;
+  margin-left: auto;
+}
+
+/* =========================
+   ABOUT & CONTACT – ORANGE BACKGROUND
+   ========================= */
+
+/* Shared orange background */
+.theme-about,
+.theme-contact {
+  background: linear-gradient(
+    180deg,
+    #f28c28 0%,
+    #f6f4ef 35%
+  );
+}
+
+/* Ensure content cards still pop */
+.theme-about .text-card,
+.theme-contact .text-card {
+  background: #ffffff;
+}
+
+/* Top bar contrast on orange */
+.theme-about .topbar h1,
+.theme-contact .topbar h1,
+.theme-about .topbar .back,
+.theme-contact .topbar .back {
+  color: #ffffff;
+}
+
+/* Back button hover still visible */
+.theme-about .topbar .back:hover,
+.theme-contact .topbar .back:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
