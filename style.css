@@ -206,7 +206,8 @@ a.contact-link:focus-visible {
 /* Section slideshow */
 .section-slideshow {
   display: block;
-  max-width: 900px;
+  width: 100%;              /* full width */
+  max-width: 100%;          /* removes yellow side bars */
   margin-top: 18px;
   border-radius: 18px;
   overflow: hidden;
@@ -214,6 +215,7 @@ a.contact-link:focus-visible {
   text-decoration: none;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
+
 
 .section-slideshow img {
   width: 100%;
@@ -474,15 +476,12 @@ figcaption span {
    ABOUT & CONTACT – ORANGE BACKGROUND
    ========================= */
 
-/* Shared orange background */
+
 .theme-about,
 .theme-contact {
-  background: linear-gradient(
-    180deg,
-    #f28c28 0%,
-    #f6f4ef 35%
-  );
+  background: var(--orange-left);
 }
+
 
 /* Ensure content cards still pop */
 .theme-about .text-card,
@@ -502,5 +501,12 @@ figcaption span {
 .theme-about .topbar .back:hover,
 .theme-contact .topbar .back:hover {
   background: rgba(255, 255, 255, 0.15);
+}
+
+
+/* Home page tiles – square, no rounding */
+.tiles .tile {
+  border-radius: 0;
+  overflow: visible;
 }
 
