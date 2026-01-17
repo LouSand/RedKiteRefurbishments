@@ -208,16 +208,17 @@ a.contact-link:focus-visible {
 /* Section slideshow */
 .section-slideshow {
   display: block;
-  width: 100%;              /* full width */
-  max-width: 100%;          /* removes yellow side bars */
-  margin-top: 18px;
-  border-radius: 18px;
-  overflow: hidden;
+  width: 60%;
+  margin: 18px auto 0;
   position: relative;
   text-decoration: none;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
-}
 
+  /* remove the “layer/card” look */
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+  background: transparent;
+}
 
 .section-slideshow img {
   width: 100%;
@@ -225,7 +226,8 @@ a.contact-link:focus-visible {
   object-fit: cover;
   display: block;
 
-  border-radius: inherit;   /* keeps corners rounded */
+  border-radius: 18px;   /* keeps corners rounded */
+  box-shadow: none; 
   opacity: 1;
   transition: opacity 0.9s ease;  /* fade speed */
 }
@@ -234,10 +236,14 @@ a.contact-link:focus-visible {
   opacity: 0;
 }
 
+@media (max-width: 900px) {
+  .section-slideshow { width: 90%; }
+}
 
 @media (max-width: 600px) {
   .section-slideshow img { height: 220px; }
 }
+
 
 .section-slideshow .overlay {
   position: absolute;
