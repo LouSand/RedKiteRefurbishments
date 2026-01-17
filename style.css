@@ -518,6 +518,25 @@ figcaption span {
   overflow: visible;
 }
 
+/* About & Contact topbar layout: title left, back button right */
+.theme-about .topbar,
+.theme-contact .topbar {
+  display: flex;
+  align-items: center;
+}
+
+.theme-about .topbar h1,
+.theme-contact .topbar h1 {
+  order: 1;
+}
+
+.theme-about .topbar .back,
+.theme-contact .topbar .back {
+  order: 2;
+  margin-left: auto; /* pushes button to the right */
+}
+
+
 /* =====================
    IMAGE LIGHTBOX
    ===================== */
@@ -543,3 +562,14 @@ figcaption span {
 .lightbox.open {
   display: flex;
 }
+
+
+/* About page title should be black */
+.theme-about .topbar h1 {
+  color: #111;
+}
+
+.theme-contact .topbar h1 {
+  color: #111;
+}
+
