@@ -12,51 +12,54 @@
 
   <header class="hero">
     <div class="brand">
-      <div class="brand-inner">
 
-        <div class="logo">
-          <img
-            src="/RedKiteRefurbishments/images/logos/red_kite_transparent_logo.png"
-            alt="Red Kite Refurbishment Logo"
-          />
+      <!-- Menu pinned top-right of orange square -->
+      <div class="menu">
+        <button
+          class="menu-btn"
+          id="menuBtn"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="dropdownMenu"
+          type="button"
+        >
+          <span></span><span></span><span></span>
+        </button>
+
+        <div class="dropdown" id="dropdownMenu" role="menu" aria-hidden="true">
+          <a href="#about_us" role="menuitem">About Us</a>
+          <a href="#kitchens" role="menuitem">Kitchens</a>
+          <a href="#bathrooms" role="menuitem">Bathrooms</a>
+          <a href="#garage-doors" role="menuitem">Garage Doors</a>
+          <a href="#composite-doors" role="menuitem">Composite Doors</a>
+          <a href="#plumbing" role="menuitem">Plumbing</a>
+          <a href="#electrical" role="menuitem">Electrical</a>
+          <a href="#joinery" role="menuitem">Joinery</a>
+          <a href="#flooring" role="menuitem">Flooring</a>
+          <a href="#contact_us" role="menuitem">Contact Us</a>
         </div>
-
-        <div class="menu">
-          <button
-            class="menu-btn"
-            id="menuBtn"
-            aria-label="Open menu"
-            aria-expanded="false"
-            aria-controls="dropdownMenu"
-            type="button"
-          >
-            <span></span><span></span><span></span>
-          </button>
-
-          <div class="dropdown" id="dropdownMenu" role="menu" aria-hidden="true">
-            <a href="#about_us" role="menuitem">About Us</a>
-            <a href="#kitchens" role="menuitem">Kitchens</a>
-            <a href="#bathrooms" role="menuitem">Bathrooms</a>
-            <a href="#garage-doors" role="menuitem">Garage Doors</a>
-            <a href="#composite-doors" role="menuitem">Composite Doors</a>
-            <a href="#joinery" role="menuitem">Joinery</a>
-            <a href="#flooring" role="menuitem">Flooring</a>
-            <a href="#contact_us" role="menuitem">Contact Us</a>
-          </div>
-        </div>
-
       </div>
+
+      <!-- Logo centered -->
+      <div class="logo">
+        <img
+          src="/RedKiteRefurbishments/images/logos/red_kite_transparent_logo.png"
+          alt="Red Kite Refurbishment Logo"
+        />
+      </div>
+
     </div>
 
+    <!-- Service tiles -->
     <nav class="tiles" aria-label="Services">
       <a class="tile kitchens" href="#kitchens">Kitchens</a>
       <a class="tile bathrooms" href="#bathrooms">Bathrooms</a>
       <a class="tile garage" href="#garage-doors">Garage Doors</a>
       <a class="tile composite" href="#composite-doors">Composite Doors</a>
+      <a class="tile plumbing" href="#plumbing">Plumbing</a>
+      <a class="tile electrical" href="#electrical">Electrical</a>
       <a class="tile joinery" href="#joinery">Joinery</a>
       <a class="tile flooring" href="#flooring">Flooring</a>
-      <a class="tile plumbing" href="#contact_us">Plumbing</a>
-      <a class="tile electrical" href="#contact_us">Electrical</a>
     </nav>
   </header>
 
@@ -64,9 +67,7 @@
 
     <section id="about_us">
       <h2>About Us</h2>
-      <p>
-        Add your business story here (years experience, areas covered, specialisms, and what makes you different).
-      </p>
+      <p>Add your business story here (experience, areas covered, and what makes you different).</p>
     </section>
 
     <section id="kitchens">
@@ -109,12 +110,32 @@
       </a>
     </section>
 
+    <section id="plumbing">
+      <h2>Plumbing</h2>
+      <p>Professional plumbing services.</p>
+
+      <a class="gallery-link" href="bathrooms.html" aria-label="Open Plumbing-related gallery page">
+        <img src="/RedKiteRefurbishments/images/example_images/bathroom_sink_toilet.jpeg" alt="Plumbing-related example">
+        <div class="overlay">Click for gallery / information</div>
+      </a>
+    </section>
+
+    <section id="electrical">
+      <h2>Electrical</h2>
+      <p>Certified electrical work.</p>
+
+      <a class="gallery-link" href="joinery.html" aria-label="Open Electrical-related gallery page">
+        <img src="/RedKiteRefurbishments/images/example_images/light_box_display.jpeg" alt="Electrical-related example (light box display)">
+        <div class="overlay">Click for gallery / information</div>
+      </a>
+    </section>
+
     <section id="joinery">
       <h2>Joinery</h2>
       <p>Joinery and bespoke carpentry services.</p>
 
       <a class="gallery-link" href="joinery.html" aria-label="Open Joinery gallery page">
-        <img src="/RedKiteRefurbishments/images/example_images/custom_floating_bed_landscape.jpeg" alt="Joinery example (custom floating bed)">
+        <img src="/RedKiteRefurbishments/images/example_images/custom_floating_bed_landscape.jpeg" alt="Joinery example">
         <div class="overlay">Click for gallery / information</div>
       </a>
     </section>
@@ -124,16 +145,14 @@
       <p>Flooring installation and refurbishment services.</p>
 
       <a class="gallery-link" href="flooring.html" aria-label="Open Flooring gallery page">
-        <img src="/RedKiteRefurbishments/images/example_images/lvt_flooring_wooden.jpeg" alt="Flooring example (wood effect LVT)">
+        <img src="/RedKiteRefurbishments/images/example_images/lvt_flooring_wooden.jpeg" alt="Flooring example">
         <div class="overlay">Click for gallery / information</div>
       </a>
     </section>
 
     <section id="contact_us">
       <h2>Contact Us</h2>
-      <p>
-        Add your phone number, email and area coverage here (and a contact form later if you want).
-      </p>
+      <p>Add your phone/email and location details here.</p>
     </section>
 
   </main>
@@ -168,4 +187,3 @@
 
 </body>
 </html>
-<!---->

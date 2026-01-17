@@ -26,18 +26,11 @@ body {
 /* LEFT PANEL */
 .brand {
   background: var(--orange-left);
+  position: relative; /* so we can pin menu to top-right */
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px;
-}
-
-/* NEW: logo + menu row */
-.brand-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
 }
 
 /* LOGO */
@@ -51,10 +44,12 @@ body {
   height: auto;
 }
 
-/* MENU (now sits to the right of the logo) */
+/* MENU (top-right of orange square) */
 .menu {
-  position: relative; /* anchor dropdown to button */
-  z-index: 100;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 200;
 }
 
 /* MENU BUTTON */
@@ -62,7 +57,7 @@ body {
   width: 54px;
   height: 54px;
   border: 3px solid #111;
-  border-radius: 8px;
+  border-radius: 10px;
   background: transparent;
   cursor: pointer;
   padding: 0;
@@ -87,7 +82,7 @@ body {
   position: absolute;
   top: 64px;
   right: 0;
-  min-width: 220px;
+  min-width: 240px;
   background: #111;
   border-radius: 12px;
   padding: 10px;
@@ -187,7 +182,7 @@ section p {
 #joinery { background: var(--orange-tile); }
 #flooring { background: var(--brown); }
 
-/* Clickable image card + hover overlay (for “Click for gallery / information”) */
+/* CLICKABLE SECTION IMAGE (hover overlay) */
 .gallery-link {
   display: block;
   max-width: 900px;
@@ -232,7 +227,7 @@ section p {
   border-radius: 18px;
 }
 
-/* Gallery page layout (used by kitchens.html etc.) */
+/* GALLERY PAGES (neat small grid + rounded corners) */
 .page {
   max-width: 1100px;
   margin: 0 auto;
@@ -265,4 +260,104 @@ section p {
 
 .gallery {
   display: grid;
-  grid-template-c
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* smaller, neater cards */
+  gap: 14px;
+}
+
+figure {
+  margin: 0;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+}
+
+figure img {
+  width: 100%;
+  height: 170px;          /* smaller neat thumbnails */
+  object-fit: cover;
+  display: block;
+  border-radius: 14px 14px 0 0; /* slightly rounded corners on photo */
+}
+
+figcaption {
+  padding: 10px 12px 12px;
+}
+
+figcaption strong {
+  display: block;
+  margin-bottom: 6px;
+}
+
+figcaption span {
+  display: block;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE: stack tiles below orange square on small screens */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr; /* orange panel on top, tiles underneath */
+    height: auto;
+  }
+
+  /* Logo and menu shrink together */
+  .logo img { max-width: 240px; }
+
+  .menu {
+    top: 16px;
+    right: 16px;
+  }
+
+  .menu-btn {
+    width: 46px;
+    height: 46px;
+    border-width: 2.5px;
+  }
+
+  .menu-btn span {
+    width: 24px;
+    height: 3.5px;
+    margin: 5px auto;
+  }
+
+  /* Make the tile section a sensible height */
+  .tiles {
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo img { max-width: 210px; }
+
+  .menu {
+    top: 14px;
+    right: 14px;
+  }
+
+  .menu-btn {
+    width: 40px;
+    height: 40px;
+    border-width: 2px;
+  }
+
+  .menu-btn span {
+    width: 20px;
+    height: 3px;
+    margin: 4px auto;
+  }
+
+  .dropdown {
+    min-width: 220px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+
+  figure img {
+    height: 150px;
+  }
+}
+/* fgdg */
