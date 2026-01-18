@@ -335,7 +335,7 @@ body.theme-flooring { background: var(--brown); }
   justify-content: space-between;
   gap: 10px;
 
-  padding: 18px 24px;   /* ⬅ adds space from top & sides */
+ /* padding: 18px 24px;   ⬅ adds space from top & sides */
 }
 
 
@@ -539,6 +539,11 @@ figcaption span {
   margin-left: auto; /* pushes button to the right */
 }
 
+/* About + Contact only: space from top & sides */
+.theme-about .topbar,
+.theme-contact .topbar {
+  padding: 18px 24px;
+}
 
 /* =====================
    IMAGE LIGHTBOX
