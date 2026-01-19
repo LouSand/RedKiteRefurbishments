@@ -46,9 +46,14 @@
   </div>
 
   <!-- Lightbox (add this once per gallery page) -->
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <img id="lightbox-img" alt="">
-  </div>
+ <div id="lightbox" class="lightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Close">✕</button>
+  <button class="lightbox-nav prev" type="button" aria-label="Previous image">‹</button>
+
+  <img id="lightbox-img" alt="">
+
+  <button class="lightbox-nav next" type="button" aria-label="Next image">›</button>
+</div>
 
   <!-- If you're using scripts.js site-wide, keep this.
        If not, you can paste the JS inline instead (tell me and I’ll give it). -->
