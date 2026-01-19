@@ -114,9 +114,8 @@ document.addEventListener("DOMContentLoaded", () => {
   startSlideshow("flooring", "slideshow-flooring");
 });
 
-
 // =====================
-// GALLERY LIGHTBOX (with next/prev)
+// GALLERY LIGHTBOX (next/prev + keyboard + swipe)
 // =====================
 document.addEventListener("DOMContentLoaded", () => {
   const lightbox = document.getElementById("lightbox");
@@ -133,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
 
   function show(index) {
-    currentIndex = (index + imgs.length) % imgs.length; // wrap around
+    currentIndex = (index + imgs.length) % imgs.length; // wrap
     const img = imgs[currentIndex];
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt || "";
@@ -143,7 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     show(index);
     lightbox.classList.add("open");
     lightbox.setAttribute("aria-hidden", "false");
-    document.body.style.overflow = "hidden"; // stop background scrolling
+    document.body.style.overflow = "hidden";
   }
 
   function close() {
@@ -155,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function next() { show(currentIndex + 1); }
   function prev() { show(currentIndex - 1); }
 
-  // open on image click
+  // Open on image click
   document.addEventListener("click", (e) => {
     const img = e.target.closest(".lightbox-img");
     if (!img) return;
@@ -164,17 +163,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index >= 0) openAt(index);
   });
 
-  // buttons
+  // Buttons
   if (btnNext) btnNext.addEventListener("click", (e) => { e.stopPropagation(); next(); });
   if (btnPrev) btnPrev.addEventListener("click", (e) => { e.stopPropagation(); prev(); });
   if (btnClose) btnClose.addEventListener("click", (e) => { e.stopPropagation(); close(); });
 
-  // click backdrop to close (but not when clicking image/buttons)
+  // Click backdrop to close
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) close();
   });
 
-  // keyboard controls
+  // Keyboard controls
   document.addEventListener("keydown", (e) => {
     if (!lightbox.classList.contains("open")) return;
 
@@ -182,4 +181,40 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.key === "ArrowRight") next();
     if (e.key === "ArrowLeft") prev();
   });
+
+  // =====================
+  // Swipe support (mobile)
+  // =====================
+  let touchStartX = 0;
+  let touchStartY = 0;
+  let touchEndX = 0;
+  let touchEndY = 0;
+
+  const MIN_SWIPE_DISTANCE = 50;   // px
+  const MAX_VERTICAL_DRIFT = 80;   // px, so normal scroll doesn't trigger
+
+  lightbox.addEventListener("touchstart", (e) => {
+    if (!lightbox.classList.contains("open")) return;
+    const t = e.changedTouches[0];
+    touchStartX = t.screenX;
+    touchStartY = t.screenY;
+  }, { passive: true });
+
+  lightbox.addEventListener("touchend", (e) => {
+    if (!lightbox.classList.contains("open")) return;
+    const t = e.changedTouches[0];
+    touchEndX = t.screenX;
+    touchEndY = t.screenY;
+
+    const dx = touchEndX - touchStartX;
+    const dy = touchEndY - touchStartY;
+
+    // ignore if mostly vertical movement (scroll)
+    if (Math.abs(dy) > MAX_VERTICAL_DRIFT) return;
+
+    if (Math.abs(dx) >= MIN_SWIPE_DISTANCE) {
+      if (dx < 0) next();  // swipe left
+      else prev();         // swipe right
+    }
+  }, { passive: true });
 });
