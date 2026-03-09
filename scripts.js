@@ -33,48 +33,82 @@ document.addEventListener("DOMContentLoaded", () => {
   // =====================
   // SLIDESHOWS (SLOW + FADE)
   // =====================
-  const slideshows = {
-    kitchens: [
-      "images/example_images/kitchen_birch_plywood.png",
-      "images/example_images/hidden_kitchen_birch_plywood.png",
-      "images/example_images/kitchen_breakfast_bar.jpeg",
-      "images/example_images/carrara_marble_veinmatched_island.jpeg"
-    ],
-    bathrooms: [
-      "images/example_images/bathroom_bath_slate_tiles.jpeg",
-      "images/example_images/bathroom_black_slate_flooring.jpeg",
-      "images/example_images/bathroom_sink_slate_tiles.jpeg",
-      "images/example_images/bathroom_sink_toilet.jpeg",
-      "images/example_images/bathroom&flooring.jpeg"
-    ],
-    garage: [
-      "images/example_images/extention_front_glass_door.jpeg",
-      "images/example_images/extention_glass.jpeg"
-    ],
-    composite: [
-      "images/example_images/oak_doors.jpeg"
-    ],
-    plumbing: [
-      "images/example_images/bathroom_sink_toilet.jpeg",
-      "images/example_images/bathroom_sink_slate_tiles.jpeg"
-    ],
-    electrical: [
-      "images/example_images/light_box_display.jpeg",
-      "images/example_images/showroom.jpeg"
-    ],
-    joinery: [
-      "images/example_images/custom_floating_bed_landscape.jpeg",
-      "images/example_images/murphy_bed.png",
-      "images/example_images/reception_desk.jpeg",
-      "images/example_images/bar_with_trim.jpeg"
-    ],
-    flooring: [
-      "images/example_images/lvt_flooring_wooden.jpeg",
-      "images/example_images/lvt_flooring.jpeg",
-      "images/example_images/flooring_edges.jpeg",
-      "images/example_images/wood_LVT_flooring.jpeg"
-    ]
-  };
+ const slideshowImages = {
+  kitchens: [
+    "images/example_images/kitchen_quartz_work_surfaces_all.jpeg",
+    "images/example_images/kitchen_island.jpeg",
+    "images/example_images/kitchen_quartz_work_surfaces.jpeg",
+    "images/example_images/kitchen_quartz_work_surfaces_breakfast_bar.jpeg",
+    "images/example_images/kitchen_quartz_work_surfaces_undermounted_sink.jpeg",
+    "images/example_images/kitchen_quartz_work_surfaces_undermounted_sink2.jpeg",
+    "images/example_images/hidden_kitchen_birch_plywood.png",
+    "images/example_images/kitchen_birch_plywood.png",
+    "images/example_images/kitchen_birch_plywood_cupboard.png",
+    "images/example_images/kitchen_breakfast_bar.jpeg",
+    "images/example_images/kitchen_side.jpeg"
+  ],
+
+  bathrooms: [
+    "images/example_images/bathroom_bath_slate_tiles.jpeg",
+    "images/example_images/bathroom_black_slate_flooring.jpeg",
+    "images/example_images/bathroom_sink_slate_tiles.jpeg",
+    "images/example_images/bathroom_sink_toilet.jpeg",
+    "images/example_images/bathroom&flooring.jpeg"
+  ],
+
+  garage: [
+    "images/example_images/sectional_door.jpeg",
+    "images/example_images/sectional_door_green.jpeg",
+    "images/example_images/side_hinge_door.jpeg",
+    "images/example_images/side_hinge_door_white.jpeg",
+    "images/example_images/roller_door.jpeg",
+    "images/example_images/roller_door_agate_grey.jpeg",
+    "images/example_images/roller_door_chartwell_green.jpeg",
+    "images/example_images/roller_door_white.jpeg",
+    "images/example_images/upnover_door_anthracite.jpeg",
+    "images/example_images/upnover_door.jpeg",
+    "images/example_images/personnel_door.jpeg"
+  ],
+
+  composite: [
+    "images/example_images/composite_door_black.jpeg",
+    "images/example_images/composite_door_chartwell_green.jpeg",
+    "images/example_images/composite_door_french_grey.jpeg"
+  ],
+
+  plumbing: [
+    "images/example_images/bathroom_sink_toilet.jpeg"
+  ],
+
+  electrical: [
+    "images/example_images/showroom_lighting1.jpeg",
+    "images/example_images/showroom_lighting.jpeg",
+    "images/example_images/lighting_display_colour_daylight.jpeg",
+    "images/example_images/light_box_display.jpeg",
+    "images/example_images/light_box_display_blue_orange.jpeg",
+    "images/example_images/light_box_display_pink_green.jpeg",
+    "images/example_images/light_box_display_purple_blue.jpeg",
+    "images/example_images/light_box_display_orange_blue.jpeg",
+    "images/example_images/pendant_light.jpeg"
+  ],
+
+  joinery: [
+    "images/example_images/murphy_bed_project/WhatsApp Image 2026-03-09 at 17.21.19 (4).jpeg",
+    "images/example_images/murphy_bed_project/WhatsApp Image 2026-03-09 at 17.21.08.jpeg",
+    "images/example_images/murphy_bed_project/WhatsApp Image 2026-03-09 at 17.21.19.jpeg",
+    "images/example_images/custom_floating_bed_landscape.jpeg",
+    "images/example_images/custom_floating_bed_profile.jpeg",
+    "images/example_images/bar_with_trim.jpeg",
+    "images/example_images/reception_desk.jpeg"
+  ],
+
+  flooring: [
+    "images/example_images/lvt_flooring_wooden.jpeg",
+    "images/example_images/lvt_flooring.jpeg",
+    "images/example_images/wood_LVT_flooring.jpeg",
+    "images/example_images/flooring_edges.jpeg"
+  ]
+};
 
   function startSlideshow(key, imgId, intervalMs = 8000, fadeMs = 900) {
     const img = document.getElementById(imgId);
