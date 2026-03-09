@@ -20,6 +20,10 @@ jobs:
           server: ${{ secrets.ONECOM_HOST }}
           port: 22
           local_path: ./*
+          remote_path: /customers/8/b/5/cjqet5kb0/webroots/58cab8a7/
+          sftp_only: true
+          password: ${{ secrets.ONE_COM_PASSWORD }}
+          local_path: ./*
           remote_path: /public_html
           sftp_only: true
           password: ${{ secrets.ONECOM_PASSWORD }}
