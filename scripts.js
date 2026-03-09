@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ]
   };
 
-  function startSlideshow(key, imgId, intervalMs = 8000, fadeMs = 900) {
+  function startSlideshow(key, imgId, intervalMs = 3000, fadeMs = 900) {
     const img = document.getElementById(imgId);
     const list = slideshowImages[key];
 
