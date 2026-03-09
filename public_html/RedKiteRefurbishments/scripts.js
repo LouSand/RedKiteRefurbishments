@@ -35,44 +35,44 @@ document.addEventListener("DOMContentLoaded", () => {
   // =====================
   const slideshows = {
     kitchens: [
-      "/RedKiteRefurbishments/images/example_images/kitchen_birch_plywood.png",
-      "/RedKiteRefurbishments/images/example_images/hidden_kitchen_birch_plywood.png",
-      "/RedKiteRefurbishments/images/example_images/kitchen_breakfast_bar.jpeg",
-      "/RedKiteRefurbishments/images/example_images/carrara_marble_veinmatched_island.jpeg"
+      "images/example_images/kitchen_birch_plywood.png",
+      "images/example_images/hidden_kitchen_birch_plywood.png",
+      "images/example_images/kitchen_breakfast_bar.jpeg",
+      "images/example_images/carrara_marble_veinmatched_island.jpeg"
     ],
     bathrooms: [
-      "/RedKiteRefurbishments/images/example_images/bathroom_bath_slate_tiles.jpeg",
-      "/RedKiteRefurbishments/images/example_images/bathroom_black_slate_flooring.jpeg",
-      "/RedKiteRefurbishments/images/example_images/bathroom_sink_slate_tiles.jpeg",
-      "/RedKiteRefurbishments/images/example_images/bathroom_sink_toilet.jpeg",
-      "/RedKiteRefurbishments/images/example_images/bathroom&flooring.jpeg"
+      "images/example_images/bathroom_bath_slate_tiles.jpeg",
+      "images/example_images/bathroom_black_slate_flooring.jpeg",
+      "images/example_images/bathroom_sink_slate_tiles.jpeg",
+      "images/example_images/bathroom_sink_toilet.jpeg",
+      "images/example_images/bathroom&flooring.jpeg"
     ],
     garage: [
-      "/RedKiteRefurbishments/images/example_images/extention_front_glass_door.jpeg",
-      "/RedKiteRefurbishments/images/example_images/extention_glass.jpeg"
+      "images/example_images/extention_front_glass_door.jpeg",
+      "images/example_images/extention_glass.jpeg"
     ],
     composite: [
-      "/RedKiteRefurbishments/images/example_images/oak_doors.jpeg"
+      "images/example_images/oak_doors.jpeg"
     ],
     plumbing: [
-      "/RedKiteRefurbishments/images/example_images/bathroom_sink_toilet.jpeg",
-      "/RedKiteRefurbishments/images/example_images/bathroom_sink_slate_tiles.jpeg"
+      "images/example_images/bathroom_sink_toilet.jpeg",
+      "images/example_images/bathroom_sink_slate_tiles.jpeg"
     ],
     electrical: [
-      "/RedKiteRefurbishments/images/example_images/light_box_display.jpeg",
-      "/RedKiteRefurbishments/images/example_images/showroom.jpeg"
+      "images/example_images/light_box_display.jpeg",
+      "images/example_images/showroom.jpeg"
     ],
     joinery: [
-      "/RedKiteRefurbishments/images/example_images/custom_floating_bed_landscape.jpeg",
-      "/RedKiteRefurbishments/images/example_images/murphy_bed.png",
-      "/RedKiteRefurbishments/images/example_images/reception_desk.jpeg",
-      "/RedKiteRefurbishments/images/example_images/bar_with_trim.jpeg"
+      "images/example_images/custom_floating_bed_landscape.jpeg",
+      "images/example_images/murphy_bed.png",
+      "images/example_images/reception_desk.jpeg",
+      "images/example_images/bar_with_trim.jpeg"
     ],
     flooring: [
-      "/RedKiteRefurbishments/images/example_images/lvt_flooring_wooden.jpeg",
-      "/RedKiteRefurbishments/images/example_images/lvt_flooring.jpeg",
-      "/RedKiteRefurbishments/images/example_images/flooring_edges.jpeg",
-      "/RedKiteRefurbishments/images/example_images/wood_LVT_flooring.jpeg"
+      "images/example_images/lvt_flooring_wooden.jpeg",
+      "images/example_images/lvt_flooring.jpeg",
+      "images/example_images/flooring_edges.jpeg",
+      "images/example_images/wood_LVT_flooring.jpeg"
     ]
   };
 
