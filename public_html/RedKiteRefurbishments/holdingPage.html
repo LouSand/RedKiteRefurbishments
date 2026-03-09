@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Red Kite Refurbishments</title>
+  <style>
+    :root {
+      --orange: #f5820b;
+      --black: #0f0f10;
+      --red: #d7261e;
+      --white: #ffffff;
+      --muted: #d7d7d7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, orange 0%, orange 100%);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 920px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    /* .top-bar {
+      height: 12px;
+      background: linear-gradient(90deg, var(--orange) 0%, var(--red) 100%);
+    } */
+
+    .content {
+      padding: 48px 32px;
+      text-align: center;
+    }
+
+    .logo-wrap {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1px;
+      margin-bottom: 1px;
+    }
+
+    .kite {
+      width: 150px;
+      height: auto;
+      display: block;
+    }
+
+    h1 {
+      margin: 0;
+      line-height: 0.95;
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      letter-spacing: 0.04em;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .red {
+      color: var(--red);
+    }
+
+    .orange {
+      color: var(--orange);
+    }
+
+    .message {
+      max-width: 680px;
+      margin: 18px auto 0;
+      font-size: clamp(1.05rem, 2.4vw, 1.35rem);
+      color: black;
+      line-height: 1.6;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      background: var(--orange);
+      color: var(--black);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 0.9rem;
+    }
+
+    /* .footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 18px 24px;
+      text-align: center;
+      color: #bcbcbc;
+      font-size: 0.95rem;
+      background: rgba(255, 255, 255, 0.02);
+    } */
+
+    @media (max-width: 640px) {
+      .content {
+        padding: 36px 20px;
+      }
+
+      .kite {
+        width: 110px;
+      }
+
+      .footer {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="top-bar"></div>
+    <section class="content">
+      <div class="logo-wrap">
+        <img src="images\logos\red_kite_transparent_logo.png" alt="Description of image">
+          <path fill="#f5820b" d="M22 61c18-5 31-17 42-31-3 11-7 19-13 29 17-6 27-17 38-32-3 14-8 24-17 35 10-2 20-5 29-10 13-6 26-9 40-9 11 0 20 2 29 7 8 4 17 6 29 6 12 0 22-2 31-5-8 8-18 14-29 18 14 2 28 0 41-4-10 12-25 20-43 23-14 2-28 1-40-4-9-4-18-5-28-4-8 1-15 4-23 9l-27 17 13-19c-16 2-29 0-39-5-11-6-20-13-33-21Z"/>
+        </svg>
+        
+      </div>
+
+      <p class="message">
+        Our new website is currently being prepared and will be launching soon.
+        Thank you for your patience.
+      </p>
+
+      <div class="badge">Website Coming Soon</div>
+    </section>
+    <!-- <div class="footer">Red Kite Refurbishments</div> -->
+  </main>
+</body>
+</html>
