@@ -683,3 +683,14 @@ figcaption span {
   transform: translateY(-2px);
   transition: 0.2s ease;
 }
+
+.click-note {
+  display: block;
+  width: 100%;
+  max-width: 900px;   /* match your slideshow image width if you set one */
+  margin: 12px auto 0 auto;
+  text-align: center;
+  font-weight: 800;   /* very bold */
+  font-size: 1.05rem;
+  letter-spacing: 0.6px;
+}
