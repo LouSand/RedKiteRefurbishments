@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
 
     bathrooms: [
-      "images/example_images/cloakroom_toilet.jpeg",
+      "images/example_images/clakroom_toilet.jpeg",
       "images/example_images/cloakroom_sink.jpeg",
       "images/example_images/bathroom_bath_slate_tiles.jpeg",
       "images/example_images/bathroom_black_slate_flooring.jpeg",
