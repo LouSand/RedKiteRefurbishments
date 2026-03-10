@@ -87,6 +87,8 @@ document.addEventListener("DOMContentLoaded", () => {
     electrical: [
       "images/example_images/showroom_lighting1.jpeg",
       "images/example_images/showroom_lighting.jpeg",
+      "images/example_images/bedside_lamp_off.jpeg",
+      "images/example_images/bedside_lamp.jpeg",
       "images/example_images/lighting_display_colour_daylight.jpeg",
       "images/example_images/light_box_display.jpeg",
       "images/example_images/light_box_display_blue_orange.jpeg",
