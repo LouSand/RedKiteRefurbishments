@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // SLIDESHOWS (SLOW + FADE)
   // =====================
   const slideshowImages = {
-
     kitchens: [
       "images/example_images/kitchen_quartz_work_surfaces_all.jpeg",
       "images/example_images/kitchen_island.jpeg",
@@ -50,13 +49,15 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
 
     bathrooms: [
-      "images/example_images/clakroom_toilet.jpeg",
+      "images/example_images/bathroom&flooring.jpeg",
+      "images/example_images/bathroom&flooring2.jpeg",
+      "images/example_images/bathroom&flooring3.jpeg",
+      "images/example_images/cloakroom_toilet.jpeg",
       "images/example_images/cloakroom_sink.jpeg",
       "images/example_images/bathroom_bath_slate_tiles.jpeg",
       "images/example_images/bathroom_black_slate_flooring.jpeg",
       "images/example_images/bathroom_sink_slate_tiles.jpeg",
-      "images/example_images/bathroom_sink_toilet.jpeg",
-      "images/example_images/bathroom&flooring.jpeg"
+      "images/example_images/bathroom_sink_toilet.jpeg"
     ],
 
     garage: [
@@ -188,8 +189,13 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.style.overflow = "";
   }
 
-  function next() { show(currentIndex + 1); }
-  function prev() { show(currentIndex - 1); }
+  function next() {
+    show(currentIndex + 1);
+  }
+
+  function prev() {
+    show(currentIndex - 1);
+  }
 
   document.addEventListener("click", (e) => {
     const img = e.target.closest(".lightbox-img");
@@ -199,9 +205,20 @@ document.addEventListener("DOMContentLoaded", () => {
     if (index >= 0) openAt(index);
   });
 
-  if (btnNext) btnNext.addEventListener("click", (e) => { e.stopPropagation(); next(); });
-  if (btnPrev) btnPrev.addEventListener("click", (e) => { e.stopPropagation(); prev(); });
-  if (btnClose) btnClose.addEventListener("click", (e) => { e.stopPropagation(); close(); });
+  if (btnNext) btnNext.addEventListener("click", (e) => {
+    e.stopPropagation();
+    next();
+  });
+
+  if (btnPrev) btnPrev.addEventListener("click", (e) => {
+    e.stopPropagation();
+    prev();
+  });
+
+  if (btnClose) btnClose.addEventListener("click", (e) => {
+    e.stopPropagation();
+    close();
+  });
 
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) close();
